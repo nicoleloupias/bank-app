@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Redirect } from 'react-router-dom';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { firebase } from '../firebase/firebaseConfig';
 import { login } from '../actions/auth';
 import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { AuthRouter } from './AuthRouter';
-import { DashboardScreen } from './../screens/DashboardScreen';
-import { LandingScreen } from './../screens/LandingScreen';
+import { AuthenticatedRouter } from './AuthenticatedRouter';
 import { TheNavbar } from '../components/TheNavbar';
+import { LandingScreen } from './../screens/LandingScreen';
+import { startLoadingData } from './../actions/money';
 
 export const AppRouter = () => {
   const dispatch = useDispatch();
@@ -17,16 +18,12 @@ export const AppRouter = () => {
   const [checking, setChecking] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  // const auth = useSelector((state) => state.auth);
   useEffect(() => {
-    console.log('hola auth');
     firebase.auth().onAuthStateChanged(async (user) => {
       if (user?.email) {
-        console.log(user);
-        console.log('hola');
-        dispatch(login(user.email, user.displayName));
+        dispatch(startLoadingData(user.email));
+        dispatch(login(user.uid, user.email, user.displayName));
         setIsLoggedIn(true);
-        // dispatch(startLoadingNotes(user.uid));
       } else {
         setIsLoggedIn(false);
       }
@@ -45,18 +42,19 @@ export const AppRouter = () => {
       <Switch>
         <PublicRoute
           isAuthenticated={isLoggedIn}
+          exact
+          path="/"
+          component={LandingScreen}
+        />
+        <PublicRoute
+          isAuthenticated={isLoggedIn}
           path="/auth"
           component={AuthRouter}
         />
-        {/* <PublicRoute
-        //   isAuthenticated={isLoggedIn}
-        //   path="/"
-        //   component={LandingScreen}
-        // /> */}
         <PrivateRoute
           isAuthenticated={isLoggedIn}
-          path="/dashboard"
-          component={DashboardScreen}
+          path="/logged"
+          component={AuthenticatedRouter}
         />
         <Redirect to="/auth" />
       </Switch>

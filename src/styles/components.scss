@@ -36,3 +36,17 @@
     font-size: 14px;
   }
 }
+
+.BalanceCard {
+  height: 170px;
+  width: 90%;
+  max-width: 350px;
+  padding: 10px;
+  border: 2px solid $black;
+  border-radius: $border-radius;
+
+  .Number {
+    margin: 0;
+    font-size: 50px;
+  }
+}

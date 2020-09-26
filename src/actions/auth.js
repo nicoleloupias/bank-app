@@ -1,7 +1,8 @@
 import Swal from 'sweetalert2';
 import { types } from '../types/types.js';
-import { firebase } from '../firebase/firebaseConfig';
+import { db, firebase } from '../firebase/firebaseConfig';
 import { startLoading, finishLoading } from './ui';
+import { startLoadingData, moneyLogout } from './money';
 
 export const startLoginEmailPassword = (email, password) => {
   return (dispatch) => {
@@ -11,7 +12,8 @@ export const startLoginEmailPassword = (email, password) => {
       .auth()
       .signInWithEmailAndPassword(email, password)
       .then(({ user }) => {
-        dispatch(login(user.email, user.displayName));
+        dispatch(startLoadingData(user.email));
+        dispatch(login(user.uid, user.email, user.displayName));
         dispatch(finishLoading());
       })
       .catch((e) => {
@@ -27,7 +29,15 @@ export const startRegisterWithEmailPasswordName = (email, password, name) => {
       .createUserWithEmailAndPassword(email, password)
       .then(async ({ user }) => {
         await user.updateProfile({ displayName: name });
-        dispatch(login(user.email, user.displayName));
+        const info = {
+          uid: user.uid,
+          email: user.email,
+          name: user.displayName,
+        };
+        await db.doc(`${user.email}/info`).set(info);
+        await db.doc(`/${user.email}/data/`).set({ balance: 0 });
+        dispatch(startLoadingData(user.email));
+        dispatch(login(user.uid, user.email, user.displayName));
       })
       .catch((e) => {
         console.log(e);
@@ -36,9 +46,10 @@ export const startRegisterWithEmailPasswordName = (email, password, name) => {
   };
 };
 
-export const login = (email, displayName) => ({
+export const login = (uid, email, displayName) => ({
   type: types.login,
   payload: {
+    uid,
     email,
     displayName,
   },
@@ -48,7 +59,7 @@ export const startLogout = () => {
   return async (dispatch) => {
     await firebase.auth().signOut();
     dispatch(logout());
-    // dispatch(noteLogout());
+    dispatch(moneyLogout());
   };
 };
 
