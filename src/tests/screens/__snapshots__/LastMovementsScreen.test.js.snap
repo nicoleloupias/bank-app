@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <LastMovementsScreen /> debe de mostrarse correctamente  1`] = `
+<div
+  className="Container LastMovements"
+>
+  <div
+    className="LeftContent"
+  >
+    <div
+      className="Content"
+    >
+      <h1>
+         
+        Last movements
+         
+      </h1>
+      <div
+        className="MovementsContainer"
+      >
+        <div
+          className="Movement"
+        >
+          <div
+            className="Details"
+          >
+            <h3>
+              From: 
+            </h3>
+            <span>
+              Test sender
+            </span>
+            <h3>
+              To: 
+            </h3>
+            <span>
+              Test receiver
+               
+            </span>
+            <h3>
+              Date:
+            </h3>
+            <span>
+              Test date
+            </span>
+          </div>
+          <div
+            className="Quantity"
+          >
+            <h2>
+              + 35€
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="RightContent"
+  >
+    <img
+      alt="actionsImg"
+      src="actionsImg.png"
+    />
+  </div>
+</div>
+`;

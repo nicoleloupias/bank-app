@@ -2,6 +2,7 @@ import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import '@testing-library/jest-dom';
 import { types } from '../../types/types';
+import { firebase } from './../../firebase/firebaseConfig';
 import {
   login,
   logout,
@@ -68,5 +69,28 @@ describe('Pruebas con las acciones de Auth', () => {
         displayName: 'Name Lastname',
       },
     });
+  });
+
+  test('debe de iniciar startRegisterWithEmailPasswordName ', async () => {
+    await store.dispatch(
+      startRegisterWithEmailPasswordName(
+        'test-bank2@testing.com',
+        '123456',
+        'Name Lastname',
+      ),
+    );
+    const user = firebase.auth().currentUser;
+
+    const actions = store.getActions();
+
+    expect(actions[0]).toEqual({
+      type: types.login,
+      payload: {
+        uid: expect.any(String),
+        email: 'test-bank2@testing.com',
+        displayName: 'Name Lastname',
+      },
+    });
+    await user.delete();
   });
 });
