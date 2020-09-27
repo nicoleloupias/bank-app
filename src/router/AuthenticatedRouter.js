@@ -7,21 +7,25 @@ import { LastMovementsScreen } from './../screens/LastMovementsScreen';
 
 export const AuthenticatedRouter = () => {
   return (
-    <div className="auth__main">
-      <div className="auth__box-container">
-        <Switch>
-          <Route exact path="/logged/dashboard" component={DashboardScreen} />
-          <Route exact path="/logged/transfer" component={TransferScreen} />
-          <Route exact path="/logged/deposit" component={DepositScreen} />
-          <Route
-            exact
-            path="/logged/last-movements"
-            component={LastMovementsScreen}
-          />
+    <Switch>
+      <Route
+        exact
+        path="/logged/dashboard"
+        component={DashboardScreen}
+      />
+      <Route
+        exact
+        path="/logged/transfer"
+        component={TransferScreen}
+      />
+      <Route exact path="/logged/deposit" component={DepositScreen} />
+      <Route
+        exact
+        path="/logged/last-movements"
+        component={LastMovementsScreen}
+      />
 
-          {/* <Redirect to="/dashboard" /> */}
-        </Switch>
-      </div>
-    </div>
+      {/* <Redirect to="/dashboard" /> */}
+    </Switch>
   );
 };

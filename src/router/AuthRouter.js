@@ -7,17 +7,13 @@ import { LandingScreen } from './../screens/LandingScreen';
 
 export const AuthRouter = () => {
   return (
-    <div className="auth__main">
-      <div className="auth__box-container">
-        <Switch>
-          <Route exact path="/" component={LandingScreen} />
-          <Route exact path="/auth/login" component={LoginScreen} />
+    <Switch>
+      <Route exact path="/" component={LandingScreen} />
+      <Route exact path="/auth/login" component={LoginScreen} />
 
-          <Route exact path="/auth/register" component={RegisterScreen} />
+      <Route exact path="/auth/register" component={RegisterScreen} />
 
-          <Redirect to="/auth/login" />
-        </Switch>
-      </div>
-    </div>
+      <Redirect to="/auth/login" />
+    </Switch>
   );
 };

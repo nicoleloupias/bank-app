@@ -1,20 +1,28 @@
-.Landing {
-  .LeftContent {
-    width: 55%;
-
-    .Content {
-      width: 400px;
-    }
-  }
-  .RightContent {
-    width: 45%;
-  }
-}
-
 .Dashboard {
   .ButtonsContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin-top: 20px;
+
+    button {
+      width: 200px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.LastMovements {
+  .MovementsContainer {
+    max-height: 800px;
+    overflow: auto;
+  }
+}
+
+.otherAuth {
+  display: flex;
+  align-items: center;
+
+  .link {
+    margin-left: 10px;
   }
 }

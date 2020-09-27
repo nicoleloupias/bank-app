@@ -4,31 +4,44 @@
   color: white;
   font-size: 16px;
   border-radius: $border-radius;
-  border: 0;
+  border: 1px solid transparent;
   cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $black;
+    color: $black;
+  }
 }
 
 .TheNavbar {
-  width: 100vw;
   height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 5px 30px rgba(25, 28, 31, 0.08);
+  padding: 10px;
 }
 
 .input-text {
   color: $dark-grey;
-  border: 0px;
-  border-bottom: 1px solid $light-grey;
+  border: 1px solid $light-grey;
+  border-radius: $border-radius;
+  padding-left: 10px;
+  margin-top: 8px;
+  margin-bottom: 15px;
   font-size: 16px;
-  margin-bottom: 10px;
   height: 30px;
-  width: 100%;
+  width: 250px;
   transition: border-bottom 0.3s ease;
 
   &:focus {
-    border-bottom: 1px solid $primary-color;
+    border: 1px solid $primary-color;
     outline: none;
   }
 
@@ -48,5 +61,27 @@
   .Number {
     margin: 0;
     font-size: 50px;
+  }
+}
+
+.Movement {
+  border-bottom: 3px solid $black;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+
+  .Details {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: repeat(3, 22px);
+    align-items: center;
+  }
+
+  .Quantity {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
   }
 }

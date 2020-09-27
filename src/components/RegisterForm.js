@@ -17,13 +17,22 @@ export const RegisterForm = () => {
     password: '',
     password2: '',
   });
-  const { name, email, password, password2, telephone, address } = formValues;
+  const {
+    name,
+    email,
+    password,
+    password2,
+    telephone,
+    address,
+  } = formValues;
 
   const handleRegister = (e) => {
     e.preventDefault();
 
     if (isFormValid()) {
-      dispatch(startRegisterWithEmailPasswordName(email, password, name));
+      dispatch(
+        startRegisterWithEmailPasswordName(email, password, name),
+      );
     }
   };
 
@@ -47,75 +56,79 @@ export const RegisterForm = () => {
   };
 
   return (
-    <form
-      onSubmit={handleRegister}
-      className="animate__animated animate__fadeIn animate__faster"
-    >
-      {msgError && <div className="auth__alert-error">{msgError}</div>}
-      <label htmlFor="name">Full name:</label>
-      <input
-        type="text"
-        placeholder="Full name"
-        name="name"
-        id="name"
-        className="input-text"
-        value={name}
-        onChange={handleInputChange}
-      />
-      <label htmlFor="email">Email:</label>
-      <input
-        type="email"
-        placeholder="Email"
-        name="email"
-        id="email"
-        className="input-text"
-        value={email}
-        onChange={handleInputChange}
-      />
-      <label htmlFor="telephone">Telephone number:</label>
-      <input
-        type="tel"
-        placeholder="Telephone"
-        name="telephone"
-        id="telephone"
-        className="input-text"
-        value={telephone}
-        onChange={handleInputChange}
-      />
-      <label htmlFor="address">Address:</label>
-      <input
-        type="text"
-        placeholder="Address"
-        name="address"
-        id="address"
-        className="input-text"
-        value={address}
-        onChange={handleInputChange}
-      />
-      <label htmlFor="password">Password:</label>
-      <input
-        type="password"
-        placeholder="Password"
-        name="password"
-        id="password"
-        className="input-text"
-        value={password}
-        onChange={handleInputChange}
-      />
-      <label htmlFor="password2">Repeat password:</label>
-      <input
-        type="password"
-        placeholder="Confirm password"
-        name="password2"
-        id="password2"
-        className="input-text"
-        value={password2}
-        onChange={handleInputChange}
-      />
+    <div>
+      <form
+        onSubmit={handleRegister}
+        className="animate__animated animate__fadeIn animate__faster"
+      >
+        {msgError && (
+          <div className="auth__alert-error">{msgError}</div>
+        )}
+        <label htmlFor="name">Full name:</label>
+        <input
+          type="text"
+          placeholder="Full name"
+          name="name"
+          id="name"
+          className="input-text"
+          value={name}
+          onChange={handleInputChange}
+        />
+        <label htmlFor="email">Email:</label>
+        <input
+          type="email"
+          placeholder="Email"
+          name="email"
+          id="email"
+          className="input-text"
+          value={email}
+          onChange={handleInputChange}
+        />
+        <label htmlFor="telephone">Telephone number:</label>
+        <input
+          type="tel"
+          placeholder="Telephone"
+          name="telephone"
+          id="telephone"
+          className="input-text"
+          value={telephone}
+          onChange={handleInputChange}
+        />
+        <label htmlFor="address">Address:</label>
+        <input
+          type="text"
+          placeholder="Address"
+          name="address"
+          id="address"
+          className="input-text"
+          value={address}
+          onChange={handleInputChange}
+        />
+        <label htmlFor="password">Password:</label>
+        <input
+          type="password"
+          placeholder="Password"
+          name="password"
+          id="password"
+          className="input-text"
+          value={password}
+          onChange={handleInputChange}
+        />
+        <label htmlFor="password2">Repeat password:</label>
+        <input
+          type="password"
+          placeholder="Confirm password"
+          name="password2"
+          id="password2"
+          className="input-text"
+          value={password2}
+          onChange={handleInputChange}
+        />
 
-      <button type="submit" className="btn btn-primary btn-block mb-5">
-        Sign up
-      </button>
-    </form>
+        <button type="submit" className="btn-primary">
+          Sign up
+        </button>
+      </form>
+    </div>
   );
 };
