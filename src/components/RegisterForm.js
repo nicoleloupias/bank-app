@@ -17,22 +17,13 @@ export const RegisterForm = () => {
     password: '',
     password2: '',
   });
-  const {
-    name,
-    email,
-    password,
-    password2,
-    telephone,
-    address,
-  } = formValues;
+  const { name, email, password, password2, telephone, address } = formValues;
 
   const handleRegister = (e) => {
     e.preventDefault();
 
     if (isFormValid()) {
-      dispatch(
-        startRegisterWithEmailPasswordName(email, password, name),
-      );
+      dispatch(startRegisterWithEmailPasswordName(email, password, name));
     }
   };
 
@@ -57,13 +48,8 @@ export const RegisterForm = () => {
 
   return (
     <div>
-      <form
-        onSubmit={handleRegister}
-        className="animate__animated animate__fadeIn animate__faster"
-      >
-        {msgError && (
-          <div className="auth__alert-error">{msgError}</div>
-        )}
+      <form onSubmit={handleRegister}>
+        {msgError && <div className="msgError">{msgError}</div>}
         <label htmlFor="name">Full name:</label>
         <input
           type="text"

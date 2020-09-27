@@ -20,7 +20,7 @@ export const TransferScreen = () => {
     e.preventDefault();
     reset();
     if (receiverEmail === userEmail) {
-      Swal.fire('Error', "You can't transfer yourself money", 'error');
+      Swal.fire('Error', "You can't transfer yourself money.", 'error');
       return;
     }
     if (quantity > balance) {
@@ -31,12 +31,21 @@ export const TransferScreen = () => {
       );
       return;
     }
+    if (quantity < 0) {
+      Swal.fire('Error', 'Quantity must be greater than 0€.', 'error');
+      return;
+    }
+
     dispatch(transferMoney(parseFloat(quantity), receiverEmail));
   };
 
   return (
     <Layout component="Transfer" img="actionsImg" title="Transfer money">
-      {balance && <p>You have {balance}€ in your account.</p>}
+      {typeof balance === 'number' && (
+        <p>
+          You currently have <b>{balance}€</b> in your account.
+        </p>
+      )}
       <form onSubmit={handleSubmit}>
         <label htmlFor="quantity">Quantity:</label>
         <input
@@ -44,6 +53,7 @@ export const TransferScreen = () => {
           placeholder="0€"
           name="quantity"
           id="quantity"
+          min="0"
           className="input-text"
           value={quantity}
           onChange={handleInputChange}

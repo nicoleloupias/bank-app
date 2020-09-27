@@ -6,7 +6,7 @@ export const BalanceCard = () => {
   return (
     <div className="BalanceCard">
       <h2>Balance:</h2>
-      {balance && <p className="Number"> {balance}€</p>}
+      {typeof balance === 'number' && <p className="Number"> {balance}€</p>}
     </div>
   );
 };

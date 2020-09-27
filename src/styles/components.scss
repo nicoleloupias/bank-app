@@ -52,11 +52,13 @@
 
 .BalanceCard {
   height: 170px;
-  width: 90%;
-  max-width: 350px;
-  padding: 10px;
   border: 2px solid $black;
   border-radius: $border-radius;
+  width: 60%;
+  max-width: 350px;
+  padding: 10px;
+  padding-left: 30px;
+  margin-top: 15px;
 
   .Number {
     margin: 0;

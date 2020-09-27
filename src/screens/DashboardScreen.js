@@ -11,13 +11,13 @@ export const DashboardScreen = () => {
     <Layout
       component="Dashboard"
       img="actionsImg"
-      title={`Welcome back, ${name}`}
+      title={`Welcome back, ${name}!`}
     >
       <p>You can:</p>
-      <p>
-        Check your money, transfer money or view your last movements.{' '}
-      </p>
+      <p>Deposit money, transfer money or view your last movements. </p>
+
       <BalanceCard />
+
       <div className="ButtonsContainer">
         <Link to="/logged/last-movements">
           <button className="btn-primary">
