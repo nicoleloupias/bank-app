@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <LoginScreen /> debe de mostrarse correctamente  1`] = `
+<div
+  className="Container Login"
+>
+  <div
+    className="LeftContent"
+  >
+    <div
+      className="Content"
+    >
+      <h1>
+         
+        Sign in
+         
+      </h1>
+      <form
+        className="animate__animated animate__fadeIn animate__faster"
+        onSubmit={[Function]}
+      >
+        <input
+          autoComplete="off"
+          className="input-text"
+          name="email"
+          onChange={[Function]}
+          placeholder="Email"
+          type="text"
+          value=""
+        />
+        <input
+          className="input-text"
+          name="password"
+          onChange={[Function]}
+          placeholder="Password"
+          type="password"
+          value=""
+        />
+        <button
+          className="btn-primary"
+          type="submit"
+        >
+          Sign in
+        </button>
+      </form>
+      <div
+        className="otherAuth"
+      >
+        <p>
+          Don't have an account?
+        </p>
+        <a
+          className="link"
+          href="/auth/register"
+          onClick={[Function]}
+        >
+          Sign up
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="RightContent"
+  >
+    <img
+      alt="authImg"
+      src="authImg.png"
+    />
+  </div>
+</div>
+`;

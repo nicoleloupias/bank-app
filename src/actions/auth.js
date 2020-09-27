@@ -24,7 +24,7 @@ export const startLoginEmailPassword = (email, password) => {
 };
 export const startRegisterWithEmailPasswordName = (email, password, name) => {
   return (dispatch) => {
-    firebase
+    return firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then(async ({ user }) => {

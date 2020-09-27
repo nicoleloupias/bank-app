@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <LoginForm /> debe de mostrarse correctamente 1`] = `
+<form
+  className="animate__animated animate__fadeIn animate__faster"
+  onSubmit={[Function]}
+>
+  <input
+    autoComplete="off"
+    className="input-text"
+    name="email"
+    onChange={[Function]}
+    placeholder="Email"
+    type="text"
+    value=""
+  />
+  <input
+    className="input-text"
+    name="password"
+    onChange={[Function]}
+    placeholder="Password"
+    type="password"
+    value=""
+  />
+  <button
+    className="btn-primary"
+    type="submit"
+  >
+    Sign in
+  </button>
+</form>
+`;

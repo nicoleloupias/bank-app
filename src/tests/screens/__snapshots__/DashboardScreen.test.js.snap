@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <DashboardScreen /> debe de mostrarse correctamente  1`] = `
+<div
+  className="Container Dashboard"
+>
+  <div
+    className="LeftContent"
+  >
+    <div
+      className="Content"
+    >
+      <h1>
+         
+        Welcome back, Test name!
+         
+      </h1>
+      <p>
+        You can:
+      </p>
+      <p>
+        Deposit money, transfer money or view your last movements. 
+      </p>
+      <div
+        className="BalanceCard"
+      >
+        <h2>
+          Balance:
+        </h2>
+        <p
+          className="Number"
+        >
+           
+          20
+          €
+        </p>
+      </div>
+      <div
+        className="ButtonsContainer"
+      >
+        <a
+          href="/logged/last-movements"
+          onClick={[Function]}
+        >
+          <button
+            className="btn-primary"
+          >
+            <span>
+              Check last movements
+            </span>
+          </button>
+        </a>
+        <a
+          href="/logged/transfer"
+          onClick={[Function]}
+        >
+          <button
+            className="btn-primary"
+          >
+            <span>
+              Transfer money
+            </span>
+          </button>
+        </a>
+        <a
+          href="/logged/deposit"
+          onClick={[Function]}
+        >
+          <button
+            className="btn-primary"
+          >
+            <span>
+              Deposit money
+            </span>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="RightContent"
+  >
+    <img
+      alt="actionsImg"
+      src="actionsImg.png"
+    />
+  </div>
+</div>
+`;

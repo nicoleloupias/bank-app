@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <TheNavbar /> debe de mostrarse correctamente 1`] = `
+<nav
+  className="TheNavbar"
+>
+  <a
+    className="m-2"
+    href="/"
+    onClick={[Function]}
+  >
+    Smart Bank
+  </a>
+  <button
+    className="btn-primary m-2"
+    onClick={[Function]}
+  >
+    <span>
+      Sign out
+    </span>
+  </button>
+</nav>
+`;

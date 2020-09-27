@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <Movement /> debe mostrarse correctamente 1`] = `
+<div
+  className="Movement"
+>
+  <div
+    className="Details"
+  >
+    <h3>
+      From: 
+    </h3>
+    <span>
+      Test sender
+    </span>
+    <h3>
+      To: 
+    </h3>
+    <span>
+      Test receiver
+       
+    </span>
+    <h3>
+      Date:
+    </h3>
+    <span>
+      Date test
+    </span>
+  </div>
+  <div
+    className="Quantity"
+  >
+    <h2>
+      + 40€
+    </h2>
+  </div>
+</div>
+`;

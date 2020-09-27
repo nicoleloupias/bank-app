@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <RegisterScreen /> debe de mostrarse correctamente  1`] = `
+<div
+  className="Container Register"
+>
+  <div
+    className="LeftContent"
+  >
+    <div
+      className="Content"
+    >
+      <h1>
+         
+        Create an account
+         
+      </h1>
+      <div>
+        <form
+          onSubmit={[Function]}
+        >
+          <label
+            htmlFor="name"
+          >
+            Full name:
+          </label>
+          <input
+            className="input-text"
+            id="name"
+            name="name"
+            onChange={[Function]}
+            placeholder="Full name"
+            type="text"
+            value=""
+          />
+          <label
+            htmlFor="email"
+          >
+            Email:
+          </label>
+          <input
+            className="input-text"
+            id="email"
+            name="email"
+            onChange={[Function]}
+            placeholder="Email"
+            type="email"
+            value=""
+          />
+          <label
+            htmlFor="telephone"
+          >
+            Telephone number:
+          </label>
+          <input
+            className="input-text"
+            id="telephone"
+            name="telephone"
+            onChange={[Function]}
+            placeholder="Telephone"
+            type="tel"
+            value=""
+          />
+          <label
+            htmlFor="address"
+          >
+            Address:
+          </label>
+          <input
+            className="input-text"
+            id="address"
+            name="address"
+            onChange={[Function]}
+            placeholder="Address"
+            type="text"
+            value=""
+          />
+          <label
+            htmlFor="password"
+          >
+            Password:
+          </label>
+          <input
+            className="input-text"
+            id="password"
+            name="password"
+            onChange={[Function]}
+            placeholder="Password"
+            type="password"
+            value=""
+          />
+          <label
+            htmlFor="password2"
+          >
+            Repeat password:
+          </label>
+          <input
+            className="input-text"
+            id="password2"
+            name="password2"
+            onChange={[Function]}
+            placeholder="Confirm password"
+            type="password"
+            value=""
+          />
+          <button
+            className="btn-primary"
+            type="submit"
+          >
+            Sign up
+          </button>
+        </form>
+      </div>
+      <div
+        className="otherAuth"
+      >
+        <p>
+          Already registered?
+        </p>
+        <a
+          className="link"
+          href="/auth/login"
+          onClick={[Function]}
+        >
+          Sign in
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="RightContent"
+  >
+    <img
+      alt="authImg"
+      src="authImg.png"
+    />
+  </div>
+</div>
+`;

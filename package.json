@@ -7,6 +7,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "dayjs": "^1.8.36",
+    "enzyme-to-json": "^3.5.0",
     "firebase": "^7.21.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
@@ -41,13 +42,17 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react-hooks": "^3.4.1",
     "babel-eslint": "^10.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.1",
-    "prettier": "^2.1.2"
+    "prettier": "^2.1.2",
+    "redux-mock-store": "^1.5.4"
   }
 }

@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <LandingScreen /> debe de mostrarse correctamente 1`] = `
+<div
+  className="Container Landing"
+>
+  <div
+    className="LeftContent"
+  >
+    <div
+      className="Content"
+    >
+      <h1>
+         
+        Your favourite online wallet
+         
+      </h1>
+      <a
+        href="/auth"
+        onClick={[Function]}
+      >
+        <button
+          className="btn-primary"
+          renderas="button"
+        >
+          <span>
+            Get started
+          </span>
+        </button>
+      </a>
+    </div>
+  </div>
+  <div
+    className="RightContent"
+  >
+    <img
+      alt="landingImg"
+      src="landingImg.png"
+    />
+  </div>
+</div>
+`;

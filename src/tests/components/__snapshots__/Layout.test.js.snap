@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <Layout /> debe mostrarse correctamente 1`] = `
+<div
+  className="Container DashboardScreen"
+>
+  <div
+    className="LeftContent"
+  >
+    <div
+      className="Content"
+    >
+      <h1>
+         
+        Test title
+         
+      </h1>
+      <h2>
+        Testing children
+      </h2>
+    </div>
+  </div>
+  <div
+    className="RightContent"
+  >
+    <img
+      alt="actionsImg"
+      src="actionsImg.png"
+    />
+  </div>
+</div>
+`;

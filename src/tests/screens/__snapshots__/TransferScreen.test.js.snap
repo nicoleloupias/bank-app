@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <DepositScreen /> debe de mostrarse correctamente 1`] = `
+<div
+  className="Container Transfer"
+>
+  <div
+    className="LeftContent"
+  >
+    <div
+      className="Content"
+    >
+      <h1>
+         
+        Transfer money
+         
+      </h1>
+      <p>
+        You currently have 
+        <b>
+          50
+          €
+        </b>
+         in your account.
+      </p>
+      <form
+        onSubmit={[Function]}
+      >
+        <label
+          htmlFor="quantity"
+        >
+          Quantity:
+        </label>
+        <input
+          className="input-text"
+          id="quantity"
+          min="0"
+          name="quantity"
+          onChange={[Function]}
+          placeholder="0€"
+          type="number"
+          value=""
+        />
+        <label
+          htmlFor="receiverEmail"
+        >
+          Email of the receiver:
+        </label>
+        <input
+          className="input-text"
+          id="receiverEmail"
+          name="receiverEmail"
+          onChange={[Function]}
+          placeholder="Email"
+          type="email"
+          value=""
+        />
+        <button
+          className="btn-primary"
+        >
+          Transfer
+        </button>
+      </form>
+    </div>
+  </div>
+  <div
+    className="RightContent"
+  >
+    <img
+      alt="actionsImg"
+      src="actionsImg.png"
+    />
+  </div>
+</div>
+`;
