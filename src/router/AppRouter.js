@@ -11,6 +11,7 @@ import { AuthenticatedRouter } from './AuthenticatedRouter';
 import { TheNavbar } from '../components/TheNavbar';
 import { LandingScreen } from './../screens/LandingScreen';
 import { startLoadingData } from './../actions/money';
+import { Loader } from './../components/Loader';
 
 export const AppRouter = () => {
   const dispatch = useDispatch();
@@ -33,7 +34,7 @@ export const AppRouter = () => {
   }, [dispatch, setChecking, setIsLoggedIn]);
 
   if (checking) {
-    return <h1>Wait...</h1>;
+    return <Loader />;
   }
 
   return (
