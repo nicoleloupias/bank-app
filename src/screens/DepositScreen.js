@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 
 export const DepositScreen = () => {
   const dispatch = useDispatch();
-  const [formValues, handleInputChange] = useForm({
+  const [formValues, handleInputChange, reset] = useForm({
     quantity: '',
   });
   const { quantity } = formValues;
@@ -18,6 +18,7 @@ export const DepositScreen = () => {
       Swal.fire('Error', 'Quantity must be greater than 0€.', 'error');
       return;
     }
+    reset();
     dispatch(depositMoney(parseFloat(quantity)));
   };
 

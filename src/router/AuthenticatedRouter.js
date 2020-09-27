@@ -8,16 +8,8 @@ import { LastMovementsScreen } from './../screens/LastMovementsScreen';
 export const AuthenticatedRouter = () => {
   return (
     <Switch>
-      <Route
-        exact
-        path="/logged/dashboard"
-        component={DashboardScreen}
-      />
-      <Route
-        exact
-        path="/logged/transfer"
-        component={TransferScreen}
-      />
+      <Route exact path="/logged/dashboard" component={DashboardScreen} />
+      <Route exact path="/logged/transfer" component={TransferScreen} />
       <Route exact path="/logged/deposit" component={DepositScreen} />
       <Route
         exact
@@ -25,7 +17,7 @@ export const AuthenticatedRouter = () => {
         component={LastMovementsScreen}
       />
 
-      {/* <Redirect to="/dashboard" /> */}
+      <Redirect to="/logged/dashboard" />
     </Switch>
   );
 };
