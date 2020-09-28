@@ -37,7 +37,7 @@ export const startRegisterWithEmailPasswordName = (email, password, name) => {
         await db.doc(`${user.email}/info`).set(info);
         await db.doc(`/${user.email}/data/`).set({ balance: 0 });
         await dispatch(startLoadingData(user.email));
-        dispatch(login(user.uid, user.email, user.displayName));
+        await dispatch(login(user.uid, user.email, user.displayName));
       })
       .catch((e) => {
         console.log(e);

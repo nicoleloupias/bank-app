@@ -82,8 +82,7 @@ describe('Pruebas con las acciones de Auth', () => {
     const user = firebase.auth().currentUser;
 
     const actions = store.getActions();
-
-    expect(actions[0]).toEqual({
+    expect(actions[1]).toEqual({
       type: types.login,
       payload: {
         uid: expect.any(String),
