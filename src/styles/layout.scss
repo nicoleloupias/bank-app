@@ -2,6 +2,8 @@
   width: 100%;
   min-height: calc(100vh - 70px);
   display: flex;
+  position: relative;
+  margin-top: 70px;
 
   .LeftContent {
     width: 40%;
